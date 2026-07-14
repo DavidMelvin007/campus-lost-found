@@ -244,11 +244,9 @@ git push origin feature-name
 
 ---
 
-## 👨‍💻 Authors
+## 👨‍💻 Author
 
-Developed as a collaborative team project by:
-
-• **David Melvin**  
+**David Melvin L**  
 
 **GitHub:** https://github.com/DavidMelvin007
 
@@ -256,7 +254,8 @@ Developed as a collaborative team project by:
 
 ## 📄 License
 
-This project is intended for **educational purposes**. Feel free to explore and learn from the code.
+This project is licensed under the MIT License.
+
 
 ---
 
