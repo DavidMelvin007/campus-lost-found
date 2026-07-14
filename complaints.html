@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support & Complaints</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="complaints">
+
+<nav class="dashboard-nav">
+
+  <div>
+    <h2 data-i18n="messages">Messages & Support</h2>
+    <p id="userInfo"></p>
+  </div>
+
+  <div class="nav-actions">
+
+    <a href="lost-dashboard.html"
+       class="nav-btn"
+       data-i18n="dashboard">
+       Dashboard
+    </a>
+
+    <a href="found-dashboard.html"
+       class="nav-btn"
+       data-i18n="myUploads">
+       My Uploads
+    </a>
+
+    <label class="theme-switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="theme-slider"></span>
+    </label>
+
+    <button id="logoutBtn"
+            class="logout-btn"
+            data-i18n="logout">
+      Logout
+    </button>
+
+  </div>
+
+</nav>
+
+<main class="container">
+
+  <div class="complaints-layout">
+
+    <!-- LEFT SIDE -->
+
+    <section class="panel">
+
+      <h3 data-i18n="raiseComplaint">
+        Raise Complaint
+      </h3>
+
+      <form id="complaintForm">
+
+        <label data-i18n="subject">
+          Subject
+        </label>
+
+        <input
+          type="text"
+          id="complaintSubject"
+          placeholder="Example: Wrong item approval"
+          data-i18n-placeholder="subjectPlaceholder"
+          required
+        >
+
+        <label data-i18n="message">
+          Message
+        </label>
+
+        <textarea
+          id="complaintMessageInput"
+          rows="5"
+          placeholder="Describe your issue..."
+          data-i18n-placeholder="messagePlaceholder"
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          class="btn primary full"
+          data-i18n="sendComplaint">
+          Send Complaint
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- MIDDLE -->
+
+    <section class="panel">
+
+      <h3 data-i18n="myComplaints">
+        My Complaints
+      </h3>
+
+      <div id="complaintsList">
+
+        <div class="empty">
+          Loading complaints...
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+
+    <section class="panel">
+
+      <h3 data-i18n="chatWithAdmin">
+        Chat With Admin
+      </h3>
+
+      <div id="chatMessages"
+           class="chat-box">
+
+        <div class="empty">
+          Select a complaint to view messages.
+        </div>
+
+      </div>
+
+      <form id="replyForm">
+
+        <textarea
+          id="replyText"
+          rows="3"
+          placeholder="Type your reply..."
+          data-i18n-placeholder="replyPlaceholder"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="btn primary full"
+          data-i18n="sendReply">
+          Send Reply
+        </button>
+
+      </form>
+
+    </section>
+
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

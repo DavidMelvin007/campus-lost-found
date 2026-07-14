@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-page="adminDashboard">
+
+<nav class="dashboard-nav">
+
+  <div>
+    <h2 data-i18n="adminDashboard">Admin Dashboard</h2>
+    <p id="userInfo"></p>
+  </div>
+
+  <div class="nav-actions">
+
+    <a href="admin-users.html" class="nav-btn" data-i18n="manageUsers">
+      Users
+    </a>
+
+    <a href="admin-items.html" class="nav-btn" data-i18n="manageItems">
+      Items
+    </a>
+
+    <a href="admin-complaints.html" class="nav-btn" data-i18n="complaints">
+      Complaints
+    </a>
+
+    <label class="theme-switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="theme-slider"></span>
+    </label>
+
+    <button id="logoutBtn" class="logout-btn" data-i18n="logout">
+      Logout
+    </button>
+
+  </div>
+
+</nav>
+
+<main class="container">
+
+  <section class="stats-grid">
+
+    <div class="stat-card">
+      <h3 id="totalUsers">0</h3>
+      <p data-i18n="totalUsers">Total Users</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 id="totalItems">0</h3>
+      <p data-i18n="totalItems">Total Items</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 id="pendingItems">0</h3>
+      <p data-i18n="pendingItems">Pending Items</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 id="totalClaims">0</h3>
+      <p data-i18n="totalClaims">Total Claims</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 id="openComplaints">0</h3>
+      <p data-i18n="openComplaints">Open Complaints</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 id="returnedItems">0</h3>
+      <p data-i18n="returnedItems">Returned Items</p>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Lost & Found Portal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+
+<section id="languageScreen" class="language-screen">
+  <div class="language-card">
+    <h1>Which language are you comfortable with?</h1>
+    <p>Select your preferred language to continue.</p>
+
+    <div class="language-grid">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('hi')">हिन्दी</button>
+      <button onclick="setLanguage('te')">తెలుగు</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+      <button onclick="setLanguage('kn')">ಕನ್ನಡ</button>
+    </div>
+  </div>
+</section>
+
+<header class="hero">
+  <nav class="navbar">
+    <div class="logo" data-i18n="appName">Campus Lost & Found</div>
+
+    <div class="nav-actions">
+      <div class="custom-language">
+        <button type="button" id="languageBtn">🌐 Language</button>
+        <div id="languageMenu" class="language-menu">
+          <button type="button" onclick="setLanguage('en')">English</button>
+          <button type="button" onclick="setLanguage('ta')">தமிழ்</button>
+          <button type="button" onclick="setLanguage('hi')">हिन्दी</button>
+          <button type="button" onclick="setLanguage('te')">తెలుగు</button>
+          <button type="button" onclick="setLanguage('ml')">മലയാളം</button>
+          <button type="button" onclick="setLanguage('kn')">ಕನ್ನಡ</button>
+        </div>
+      </div>
+
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="theme-slider"></span>
+      </label>
+
+      <a href="login.html" class="nav-btn" data-i18n="login">Login</a>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <span class="tag" data-i18n="tag">College Utility Website</span>
+
+    <h1 data-i18n="heroTitle">
+      Find Lost Items. Report Found Items.
+    </h1>
+
+    <p data-i18n="heroText">
+      A campus portal for students, faculty, parents, visitors and public users to report, search and claim lost items.
+    </p>
+
+    <div class="hero-actions">
+      <a href="login.html" class="btn primary" data-i18n="getStarted">Get Started</a>
+      <a href="login.html" class="btn secondary" data-i18n="reportNow">Report / Search Item</a>
+    </div>
+  </div>
+</header>
+
+<section class="features">
+  <div class="feature-card">
+    <h3 data-i18n="searchItems">Search Items</h3>
+    <p data-i18n="searchText">
+      Search lost and found items by name, category, location and date.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3 data-i18n="uploadImages">Upload Images</h3>
+    <p data-i18n="uploadText">
+      Upload from files or capture directly using mobile camera.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3 data-i18n="claimRequests">Claim Requests</h3>
+    <p data-i18n="claimText">
+      Send proof and wait for reporter or admin approval.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>Developed using HTML, CSS, JavaScript, Supabase and Netlify.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
